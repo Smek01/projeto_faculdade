@@ -1,0 +1,220 @@
+/* Estilos das páginas Dicas de viagem, Perguntas frequentes e Depoimentos */
+
+/* ---------- Cards (dicas e depoimentos) ---------- */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card-extra {
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-extra:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.card-extra h3 {
+  margin: 10px 0 8px;
+  color: #1d3557;
+  font-size: 1.1rem;
+}
+
+.card-extra p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e8f1f8;
+  color: #457b9d;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- Filtros (dicas) ---------- */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filtro {
+  padding: 8px 18px;
+  border: 1px solid #1d3557;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d3557;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filtro:hover {
+  background: #e8f1f8;
+}
+
+.filtro.ativo {
+  background: #1d3557;
+  color: #fff;
+}
+
+.msg-vazia {
+  text-align: center;
+  color: #666;
+}
+
+/* ---------- Perguntas frequentes ---------- */
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq details {
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq details:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.faq summary {
+  padding: 16px 20px;
+  font-weight: 600;
+  color: #1d3557;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 48px;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: #e63946;
+  transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq details[open] summary {
+  border-bottom: 1px solid #e3e8ef;
+}
+
+.faq details p {
+  margin: 0;
+  padding: 16px 20px;
+  line-height: 1.6;
+}
+
+.faq details a {
+  color: #457b9d;
+  text-decoration: underline;
+}
+
+/* ---------- Depoimentos ---------- */
+.estrelas {
+  color: #f4a300;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.depoimento-texto {
+  margin: 10px 0 14px !important;
+  font-style: italic;
+}
+
+.depoimento-autor {
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.depoimento-autor span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.aviso-ficticio {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ---------- Caixa de chamada (final das páginas) ---------- */
+.caixa-chamada {
+  text-align: center;
+  padding: 36px 20px;
+  border-radius: 8px;
+  background: #1d3557;
+  color: #fff;
+}
+
+.caixa-chamada h2 {
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.caixa-chamada p {
+  margin: 0 0 20px;
+}
+
+.btn-extra {
+  display: inline-block;
+  margin: 4px 6px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-extra:hover {
+  background: #c92f3b;
+  transform: translateY(-2px);
+}
+
+.btn-extra-claro {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-extra-claro:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 480px) {
+  .grade-cards {
+    grid-template-columns: 1fr;
+  }
+}

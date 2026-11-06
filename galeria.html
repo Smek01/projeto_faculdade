@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria | Meridia Viagens</title>
+  <link rel="stylesheet" href="css/puro.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extras.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html">Meridia</a>
+      <button class="topo-btn" id="topoBtn" type="button" aria-label="Abrir menu">Menu</button>
+        <ul class="navbar-nav ms-auto"><li class="nav-item"><nav class="topo-menu" id="topoMenu"><a href="index.html">Início</a><a href="destinos.html">Destinos</a><a href="pacotes.html">Pacotes</a><a href="roteiros.html">Roteiros</a><a href="galeria.html" class="ativo">Galeria</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a href="dicas.html">Dicas de viagem</a><a href="faq.html">FAQ</a><a href="depoimentos.html">Depoimentos</a></nav></li></ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="titulo-pagina"><div class="conteudo"><h1>Galeria</h1><p>Cinco registros dos nossos viajantes. Clique para ampliar.</p></div></section>
+    <section class="conteudo secao-puro">
+      <div class="galeria-q">
+        <figure class="foto foto-q" data-legenda="Lisboa · Bondes amarelos na Alfama">
+          <img src="img/lisboa4.webp" alt="Bondes amarelos na Alfama, Lisboa">
+          <figcaption>Lisboa</figcaption>
+        </figure>
+        <figure class="foto foto-q" data-legenda="Kyoto · Portões vermelhos de Fushimi Inari">
+          <img src="img/kyoto4.png" alt="Portões vermelhos de Fushimi Inari, Kyoto">
+          <figcaption>Kyoto</figcaption>
+        </figure>
+        <figure class="foto foto-q" data-legenda="Paris · Margens do Sena ao entardecer">
+          <img src="img/paris4.png" alt="Margens do Sena ao entardecer, Paris">
+          <figcaption>Paris</figcaption>
+        </figure>
+        <figure class="foto foto-q" data-legenda="Patagônia · Geleira Perito Moreno">
+          <img src="img/patagonia.4.jpg" alt="Geleira Perito Moreno, Patagônia">
+          <figcaption>Patagônia</figcaption>
+        </figure>
+        <figure class="foto foto-q" data-legenda="Marrocos · Dunas de Merzouga">
+          <img src="img/dunas.png" class="foto-dunas" alt="Dunas de Merzouga, Marrocos">
+          <figcaption>Marrocos</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lb-caixa">
+      <div id="lbImg" class="lb-img"></div>
+      <p id="lbLegenda"></p>
+      <div class="lb-botoes"><button type="button" id="lbAnt">Anterior</button><button type="button" id="lbProx">Próxima</button><button type="button" id="lbFechar">Fechar</button></div>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodape-interno">
+      <div><strong>Meridia Viagens</strong><p>Roteiros para quem quer viajar sem pressa.</p></div>
+      <div class="rodape-links"><a href="index.html">Início</a><a href="destinos.html">Destinos</a><a href="pacotes.html">Pacotes</a><a href="roteiros.html">Roteiros</a><a href="galeria.html">Galeria</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></div>
+      <div><p>rctlucas18@gmail.com</p><p>(41) 3000-0000</p></div>
+    </div>
+    <p class="copy">© 2026 Meridia Viagens. Projeto acadêmico fictício.</p>
+  </footer>
+  <button id="btnTopo" class="btn-topo" type="button" aria-label="Voltar ao topo">Topo</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

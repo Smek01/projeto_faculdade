@@ -1,0 +1,71 @@
+/* ===== CSS puro (sem Bootstrap) - usado em galeria.html e sobre.html ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #212529; background: #fff; }
+h1, h2, h3 { line-height: 1.2; color: #1d3557; }
+h1 { font-size: 2.2rem; margin-bottom: .4rem; }
+h2 { font-size: 1.7rem; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; }
+p { margin-bottom: 1rem; }
+img, video { max-width: 100%; display: block; }
+
+/* Menu superior (flexbox) */
+.topo { position: fixed; top: 0; left: 0; width: 100%; height: 62px; background: #1d3557; z-index: 100; }
+.topo-interno { max-width: 1140px; height: 100%; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; }
+.marca { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+.topo-menu { display: flex; gap: 1.2rem; }
+.topo-menu a { color: rgba(255, 255, 255, .6); text-decoration: none; padding: .3rem 0; border-bottom: 2px solid transparent; transition: color .3s, border-color .3s; }
+.topo-menu a:hover, .topo-menu a.ativo { color: #fff; border-bottom-color: #e63946; }
+.topo-btn { display: none; background: none; border: 1px solid rgba(255, 255, 255, .5); color: #fff; padding: .35rem .8rem; border-radius: 6px; cursor: pointer; }
+
+.conteudo { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
+.secao-puro { padding-top: 3rem; padding-bottom: 3rem; }
+.faixa-clara { background: #f8f9fa; }
+.btn-puro { display: inline-block; background: #e63946; color: #fff; padding: .5rem 1.1rem; border-radius: 6px; text-decoration: none; transition: background .3s, transform .3s; }
+.btn-puro:hover { background: #c92d39; transform: translateY(-2px); }
+
+/* Flexbox */
+.flex-linha { display: flex; gap: 2rem; align-items: center; }
+.metade { flex: 1; }
+.fundadores { align-items: stretch; }
+.cartao-puro { flex: 1; background: #fff; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden; transition: transform .3s, box-shadow .3s; }
+.cartao-puro:hover { transform: translateY(-6px); box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .15); }
+.cartao-puro .ph { border-radius: 0; width: 100%; aspect-ratio: 16 / 9; }
+.cartao-texto { padding: 1.2rem; }
+.cargo { color: #457b9d; font-weight: 600; }
+video, audio { width: 100%; }
+video { border-radius: 8px; background: #000; }
+
+.linha-tempo { padding-left: 1.2rem; }
+.linha-tempo li { padding: .5rem 0; }
+.faq details { border-bottom: 1px solid #dee2e6; padding: 1rem 0; }
+.faq summary { cursor: pointer; font-weight: 600; color: #1d3557; }
+.faq details p { margin: .6rem 0 0; color: #6c757d; }
+
+/* Galeria com CSS Grid */
+.grade-galeria { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 1rem; }
+.foto { position: relative; overflow: hidden; border-radius: 8px; cursor: zoom-in; }
+.foto figcaption { position: absolute; left: 0; bottom: 0; width: 100%; padding: .6rem .8rem; background: rgba(29, 53, 87, .85); color: #fff; font-size: .9rem; transform: translateY(100%); transition: transform .3s; }
+.foto:hover figcaption { transform: none; }
+.foto .ph { transition: transform .5s; }
+.foto:hover .ph { transform: scale(1.06); }
+.g-a { grid-column: span 2; grid-row: span 2; }
+.g-b { grid-column: span 2; }
+.g-c { grid-column: 1 / -1; }
+
+.lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(0, 0, 0, .85); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.lightbox[hidden] { display: none; }
+.lb-caixa { width: min(800px, 100%); background: #1d3557; color: #fff; padding: 1rem; border-radius: 8px; }
+.lb-img .ph { width: 100%; aspect-ratio: 3 / 2; }
+.lb-caixa p { margin: .8rem 0; }
+.lb-botoes { display: flex; gap: .5rem; flex-wrap: wrap; }
+.lb-botoes button { border: 0; border-radius: 6px; padding: .4rem 1rem; cursor: pointer; background: #f1faee; }
+.lb-botoes #lbFechar { background: #e63946; color: #fff; margin-left: auto; }
+
+@media (max-width: 768px) {
+  .topo-btn { display: block; }
+  .topo-menu { display: none; position: absolute; top: 62px; left: 0; width: 100%; flex-direction: column; background: #1d3557; padding: 1rem; gap: .8rem; }
+  .topo-menu.aberto { display: flex; }
+  .flex-linha { flex-direction: column; align-items: stretch; }
+  .grade-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  h1 { font-size: 1.8rem; }
+}
